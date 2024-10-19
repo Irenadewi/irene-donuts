@@ -1,0 +1,541 @@
+:root {
+  --primary: #ee82ee;
+  --bg: #d598a3;
+  --abu: rgb(196, 174, 173);
+  --hotpink: rgb(240, 255, 240);
+  --bgcolorabu: rgb(196, 174, 173);
+  --pinktua: #ff45ad;
+  --perak: #c0c0c0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #d598a3;
+  color: #ffffff;
+  /* min-height: 5000px; */
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* navbar */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.4rem 7%;
+  background-color: var(--bg);
+  border-bottom: 1px solid var(--primary);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+}
+
+.navbar .navbar-logo {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #fff;
+  font-style: italic;
+}
+
+.navbar-logo span {
+  color: #fff;
+}
+
+.navbar .navbar-nav a {
+  color: #fff;
+  display: inline-block;
+  font-size: 1.1rem;
+  margin: 0.1rem;
+  padding: 0.3rem;
+}
+
+.navbar .navbar-nav a:hover {
+  color: var(--primary);
+}
+
+.navbar .navbar-nav a::after {
+  content: "";
+  display: block;
+  padding-bottom: 0.5rem;
+  border-bottom: 0.1rem solid var(--primary);
+  transform: scaleX(0);
+  transition: 0.2s linear;
+}
+
+.navbar .navbar-nav a:hover::after {
+  transform: scaleX(0.5);
+}
+
+.navbar .navbar-extra a {
+  color: #fff;
+  margin: 0 0.5rem;
+}
+
+.navbar .navbar-extra a:hover {
+  color: var(--primary);
+}
+
+#logomenu {
+  display: none;
+}
+
+/* hero Section */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background-image: url("../img/header-bg1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.hero .content {
+  padding: 1.4rem 7%;
+  max-width: 60rem;
+
+  color: #fff;
+  line-height: 1.2;
+  /* font-style: italic; */
+}
+
+.hero .content h1 {
+  font-size: 4.5em;
+  color: #ff45ad;
+  text-shadow: 1px 1px 3px rgb(196, 174, 173);
+  line-height: 1.2;
+}
+.hero .content h1 span {
+  color: #fff;
+}
+
+.hero .content p {
+  font-size: 1.2rem;
+  margin-top: 0.8rem;
+  line-height: 1.4;
+  font-weight: 100;
+  /* text-shadow: 1px 1px 3px rgb(196, 174, 173); */
+  color: #fff;
+}
+
+.hero .content .cta {
+  margin-top: 1rem;
+  display: inline-block;
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  color: #fff;
+  background-color: var(--pinktua);
+  border-radius: 5%;
+  /* box-shadow: ; */
+}
+.cta {
+  z-index: 2; /* Pastikan lebih besar dari elemen yang menutupi */
+  position: relative;
+}
+
+/* about section */
+.about,
+.menu,
+.contact {
+  padding: 6rem 7% 1.4rem;
+}
+.about {
+  padding: 8rem;
+}
+
+.about h2,
+.menu h2,
+.contact h2 {
+  text-align: center;
+  font-size: 2.4rem;
+  margin-bottom: 3rem;
+}
+
+.about {
+  margin-top: 0;
+}
+.about h2 span,
+.menu h2 span,
+.contact span {
+  color: var(--pinktua);
+}
+
+.about .row .content p {
+  font-size: 1.1rem;
+  font-weight: 400;
+  line-height: 1.8rem;
+  align-items: center;
+}
+.about .row .content span,
+.contact {
+  font-weight: bold;
+  font-style: italic;
+}
+
+.about .row .content h3 {
+  font-size: 1.5rem;
+  /* margin-top: 0; */
+  margin: 0%;
+}
+img {
+  width: 350px;
+  height: 400px;
+}
+
+.about .row {
+  display: flex;
+}
+
+.about .row .about-img {
+  flex: 1 1 45rem;
+}
+
+.about .row .about-img img {
+  width: 100%;
+}
+
+.about .row .content {
+  flex: 1 1 35rem;
+  padding: 0 1rem;
+}
+
+/* Menu Section Start */
+
+.menu {
+  background-color: #c0c0c0;
+}
+.menu .row,
+.menu-card {
+  background-color: #c0c0c0;
+}
+.menu h2 {
+  margin-bottom: 1rem;
+}
+
+.menu p {
+  text-align: center;
+  max-width: 30rem;
+  margin: auto;
+  font-weight: 100;
+  line-height: 1.6;
+}
+
+.menu .row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 5rem;
+  justify-content: center;
+}
+
+.menu .row,
+.menu-card {
+  text-align: center;
+  padding-bottom: 4rem;
+  flex-basis: 30%;
+  margin: 01rem; /* Beri margin untuk spasi antar card */
+  box-sizing: border-box; /* Pastikan padding tidak mempengaruhi ukuran card */
+}
+
+.menu .row,
+.menu-card img {
+  border-radius: 0%;
+  width: 100%;
+  height: auto;
+  justify-content: center;
+}
+
+.menu .row,
+.menu-card,
+.menu-card-title {
+  margin-top: 1rem auto 0.5rem;
+  color: var(--pinktua);
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 1.5rem;
+}
+.menu-card-price {
+  color: #fff;
+}
+
+/* .menu-card:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+.menu-card:hover .menu-card-title,
+.menu-card:hover .menu-card-price {
+  color: var(--pinktua);
+  transition: color 0.3s ease-in-out;
+} */
+
+.menu-card:hover {
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2); /* Efek shadow lebih besar saat hover */
+  border-color: #ff6600; /* Border berubah warna saat hover */
+  transform: translateY(-10px); /* Efek naik sedikit saat hover */
+}
+
+/* CSS untuk gambar di dalam card */
+.menu-card-img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  transition: transform 0.3s ease-in-out; /* Efek zoom pada gambar */
+}
+
+.menu-card:hover .menu-card-img {
+  transform: scale(1.1); /* Zoom gambar saat hover */
+}
+
+/* CSS untuk judul dan harga dalam card */
+.menu-card-title,
+.menu-card-price {
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out; /* Efek slide dan fade */
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.menu-card:hover .menu-card-title {
+  transform: translateY(-19px); /* Efek slide-up pada judul saat hover */
+  color: #333;
+}
+
+.menu-card:hover .menu-card-price {
+  transform: translateY(-5px); /* Efek slide-up pada harga saat hover */
+  color: #333;
+}
+
+/* Teks di dalam card */
+.menu-card-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 10px 0;
+  color: var(--pinktua);
+}
+
+.menu-card-price {
+  font-size: 1rem;
+  color: var(--perak);
+  margin-bottom: 10px;
+}
+
+/* Menu section End */
+
+/* contact section start */
+
+.contact {
+  padding: 60px 0;
+  background-color: var(--bg);
+  font-style: normal;
+}
+#contact h2 {
+  text-align: center;
+  font-size: 32px;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+#contact p {
+  text-align: center;
+  font-size: 14px;
+  margin-bottom: 40px;
+  font-weight: 100;
+  color: #ffffff;
+}
+
+#contact .map {
+  width: 100%;
+  height: 300px;
+  border: 0;
+  margin-bottom: 40px;
+}
+
+.contact form {
+  max-width: 600px;
+  margin: 0 auto;
+}
+#contact .input-group {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #fff;
+}
+#contact,
+.input-group i {
+  margin-right: 10px;
+  color: var(--pinktua);
+}
+
+#contact .input-group input {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  color: #333;
+}
+#contact .btn {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  background-color: var(--pinktua);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+#contact .btn:hover {
+  background-color: #b30077;
+}
+
+#contact .btn {
+  font-family: "poppins, sans-serif";
+  font-weight: 300px;
+}
+/* contact section end*/
+
+footer {
+  background-color: var(--perak);
+  text-align: center;
+  padding: 0.5rem 0 0.5rem;
+  margin-top: 1rem;
+}
+
+footer .socials {
+  padding: 0.1rem 0;
+  margin-bottom: 0;
+}
+
+footer .socials a {
+  color: var(--pinktua);
+  margin: 0.8rem;
+  margin-bottom: 0.1rem;
+}
+
+footer .socials a:hover {
+  color: #b30077;
+}
+
+footer .links {
+  margin-bottom: 0.2rem;
+}
+footer .links a {
+  color: var(--pinktua);
+  margin: 0.1rem 0.5rem;
+  font-weight: 400;
+}
+
+footer .links a:hover {
+  color: #b30077;
+}
+
+footer .credit {
+  font-size: 0.9rem;
+}
+
+footer .credit a {
+  color: #333;
+  font-weight: 400;
+}
+/* media Queeries */
+
+/* laptop */
+@media (max-width: 1366px) {
+  html {
+    font-size: 75%;
+  }
+  .menu .row,
+  .menu-card {
+    margin: 1rem; /* Ubah margin agar lebih sesuai dengan layar yang lebih kecil */
+    padding: 0.5rem; /* Sesuaikan padding */
+  }
+}
+/* tablet */
+@media (max-width: 768px) {
+  html {
+    font-size: 62.5%;
+  }
+
+  #logomenu {
+    display: inline-block;
+  }
+  .navbar .navbar-nav {
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    background-color: #fff;
+    width: 30rem;
+    height: 100vh;
+    transition: 0.3s;
+  }
+
+  .navbar .navbar-nav.active {
+    right: 0;
+  }
+
+  .navbar .navbar-nav a {
+    color: var(--bg);
+    display: block;
+    margin: 1.5rem;
+    padding: 0.5rem;
+    font-size: 1.9rem;
+  }
+
+  .navbar .navbar-nav a::after {
+    transform-origin: 0% 0%;
+  }
+
+  .navbar .navbar-nav a:hover ::after {
+    transform: scaleX(0.2);
+  }
+
+  .about .row {
+    flex-wrap: wrap;
+  }
+  .about .row .about-img img {
+    height: 24rem;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .about .row .content {
+    padding: 0;
+  }
+
+  .about .row .content h3 {
+    margin-top: 0.3rem;
+    font-size: 1.6rem;
+  }
+
+  .menu p {
+    font-size: 1.2rem;
+  }
+
+  .contact .row {
+    flex-wrap: wrap;
+  }
+}
+
+/* Mobile Phone */
+@media (max-width: 450px) {
+  html {
+    font-size: 55%;
+  }
+}
